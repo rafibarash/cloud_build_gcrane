@@ -1,6 +1,4 @@
-# Copy from GCR multi-region to new AR region.
+# Copy from GCR/AR to AR
 steps:
   - name: "gcr.io/go-containerregistry/gcrane"
-    args: ["cp", "-j", "100", "-r", "${_SRC_GCR_REPO}", "${_DEST_AR_REPO}"]
-    # id: "europe"
-    waitFor: ["-"]
+    args: ["cp", "-j", "100", "-r", "${_SRC_REPO}", "${_DEST_AR_REPO}"]
